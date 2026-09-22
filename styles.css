@@ -237,11 +237,6 @@ h1,h2{margin:0;font-family:"Barlow Condensed",sans-serif}
   letter-spacing:0;
   text-transform:uppercase;
 }
-.members-heading>p:last-child{
-  max-width:560px;
-  color:#b9b3a9;
-  line-height:1.75;
-}
 .members-grid{
   display:grid;
   grid-template-columns:repeat(5,minmax(140px,1fr));
@@ -297,16 +292,10 @@ footer{
   min-height:110px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:22px;
   padding:30px 4.5vw;
   border-top:1px solid var(--line);
   background:#08090b;
-  color:#72706c;
-  font-size:.72rem;
-  letter-spacing:.4px;
 }
-footer p{margin:0}
 footer .brand{color:#aaa}
 footer .brand-icon{width:32px;height:32px}
 
@@ -382,7 +371,6 @@ footer .brand-icon{width:32px;height:32px}
   .members-grid{grid-template-columns:repeat(3,minmax(120px,1fr));gap:24px 18px}
   .member-card img{width:112px}
   footer{
-    flex-wrap:wrap;
     padding:34px 24px;
   }
 }
