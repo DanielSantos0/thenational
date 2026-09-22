@@ -316,6 +316,19 @@ h1,h2,h3{margin:0;font-family:"Barlow Condensed",sans-serif}
   grid-template-columns:repeat(5,minmax(140px,1fr));
   gap:34px 28px;
 }
+.members-status{
+  grid-column:1/-1;
+  min-height:220px;
+  display:grid;
+  place-items:center;
+  margin:0;
+  color:#b9b3a9;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.4rem;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.members-status-error{color:#e67c72}
 .member-card{
   min-width:0;
   display:grid;
@@ -334,6 +347,11 @@ h1,h2,h3{margin:0;font-family:"Barlow Condensed",sans-serif}
   object-fit:cover;
   border:3px solid rgba(236,231,220,.86);
   box-shadow:0 16px 30px rgba(0,0,0,.34);
+}
+.member-card img.avatar-fallback{
+  padding:28px;
+  object-fit:contain;
+  background:#17191d;
 }
 .member-card h2{
   max-width:100%;
