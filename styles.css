@@ -52,7 +52,7 @@ button{font:inherit}
   width:38px;
   height:38px;
   display:block;
-  border-radius:7px;
+  object-fit:contain;
   box-shadow:0 10px 26px rgba(212,56,44,.28);
 }
 .site-header nav{
@@ -341,10 +341,9 @@ h1,h2,h3{margin:0;font-family:"Barlow Condensed",sans-serif}
 }
 .member-card img{
   width:128px;
-  aspect-ratio:1;
-  border-radius:50%;
+  height:auto;
+  border-radius:4px;
   display:block;
-  object-fit:cover;
   border:3px solid rgba(236,231,220,.86);
   box-shadow:0 16px 30px rgba(0,0,0,.34);
 }
@@ -360,7 +359,6 @@ h1,h2,h3{margin:0;font-family:"Barlow Condensed",sans-serif}
   line-height:1.05;
   letter-spacing:0;
   text-align:center;
-  text-transform:uppercase;
   overflow-wrap:anywhere;
 }
 

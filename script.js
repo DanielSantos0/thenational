@@ -54,7 +54,7 @@ function createMemberCard(member, index) {
   image.loading = index === 0 ? 'eager' : 'lazy';
   image.decoding = 'async';
   image.addEventListener('error', () => {
-    image.src = 'assets/dota-icon.svg';
+    image.src = 'assets/icone-dota-2.png';
     image.classList.add('avatar-fallback');
   }, { once: true });
   name.textContent = member.personaname;
