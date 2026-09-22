@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dota 2">
+  <rect width="64" height="64" rx="6" fill="#d4382c"/>
+  <path fill="#160d0d" d="M12 8h12l32 32v16H43L12 25z"/>
+  <path fill="#160d0d" d="M40 8h12L24 56H12z"/>
+  <path fill="#160d0d" d="M8 43h14l10 13H18z"/>
+  <path fill="#160d0d" d="M42 8h14v13z" opacity=".85"/>
+</svg>

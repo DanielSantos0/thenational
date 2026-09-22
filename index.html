@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Entre na arena, escolha seu herói e dispute partidas épicas." />
-  <title>Dota 2 — A batalha dos Ancestrais</title>
+  <meta name="description" content="Vis&atilde;o geral da comunidade The National em Dota 2." />
+  <title>The National | Dota 2</title>
+  <link rel="icon" href="assets/dota-icon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,77 +13,68 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Dota 2 — início">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
-      <span>DOTA <b>2</b></span>
+    <a class="brand" href="index.html" aria-label="The National - in&iacute;cio">
+      <img class="brand-icon" src="assets/dota-icon.svg" alt="" />
+      <span>The <b>National</b></span>
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
-    <nav id="main-nav" aria-label="Navegação principal">
-      <a class="active" href="#inicio">Visão geral</a>
-      <a href="#herois">Heróis</a>
-      <a href="#estrategia">Estratégia</a>
-      <a href="#competitivo">Competitivo</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav id="main-nav" aria-label="Navega&ccedil;&atilde;o principal">
+      <a class="active" href="index.html">Vis&atilde;o Geral</a>
+      <a href="membros.html">Membros</a>
     </nav>
-    <a class="header-cta" href="#jogar"><span>Jogue grátis</span><b>↗</b></a>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero overview-hero" id="inicio">
       <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-content">
-        <div class="eyebrow"><span></span> O campo de batalha espera</div>
-        <h1>DOMINE.<br><em>SUPERE.</em><br>Aline gata.</h1>
-        <p>Mais de cem heróis. Infinitas estratégias. Uma arena onde cada decisão escreve uma nova lenda.</p>
+      <div class="hero-content reveal">
+        <div class="eyebrow"><span></span> Comunidade Dota 2</div>
+        <h1>THE<br><em>NATIONAL</em></h1>
+        <p>Um espa&ccedil;o para organizar a equipe, acompanhar os membros e preparar a pr&oacute;xima etapa do projeto fora do formato de landing page.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="#jogar">Entrar na batalha <span>→</span></a>
-          <button class="btn-video" type="button" data-video><span class="play">▶</span><span><b>Assista ao trailer</b><small>Conheça a arena</small></span></button>
+          <a class="btn-primary" href="membros.html">Ver membros <span>&rarr;</span></a>
         </div>
       </div>
-      <div class="hero-meta" aria-label="Informações do jogo">
-        <div><small>GÊNERO</small><strong>MOBA ESTRATÉGICO</strong></div>
-        <div><small>PLATAFORMA</small><strong>PC · STEAM</strong></div>
-        <div><small>COMUNIDADE</small><strong>MILHÕES DE JOGADORES</strong></div>
+      <div class="hero-meta" aria-label="Resumo da comunidade">
+        <div><small>JOGO</small><strong>DOTA 2</strong></div>
+        <div><small>MEMBROS</small><strong>13 CADASTRADOS</strong></div>
+        <div><small>STATUS</small><strong>EM CONSTRU&Ccedil;&Atilde;O</strong></div>
       </div>
-      <a class="scroll-cue" href="#herois"><span>EXPLORE</span><i>↓</i></a>
     </section>
 
-    <section class="intro" id="herois">
+    <section class="overview-panel" aria-labelledby="overview-title">
       <div class="section-number">01 <span></span></div>
-      <div class="intro-copy reveal">
-        <p class="kicker">ESCOLHA SEU CAMINHO</p>
-        <h2>UM HERÓI PARA<br><em>CADA ESTILO.</em></h2>
-        <p>Do suporte que muda o rumo da luta ao carregador que decide a partida: descubra habilidades, crie combinações e encontre o seu lugar no campo de batalha.</p>
+      <div class="overview-copy reveal">
+        <p class="kicker">VIS&Atilde;O GERAL</p>
+        <h2 id="overview-title">BASE DO<br><em>PROJETO.</em></h2>
+        <p>A tela inicial agora funciona como porta de entrada para as &aacute;reas do projeto. No momento, mantemos apenas a vis&atilde;o geral e a lista de membros.</p>
       </div>
-      <div class="roles-grid reveal">
-        <article><span>⚔</span><small>FUNÇÃO 01</small><h3>CARREGADOR</h3><p>Cresça, domine e encerre a batalha.</p></article>
-        <article><span>✦</span><small>FUNÇÃO 02</small><h3>SUPORTE</h3><p>Controle o mapa e proteja sua equipe.</p></article>
-        <article><span>◈</span><small>FUNÇÃO 03</small><h3>INICIADOR</h3><p>Comece o combate nos seus termos.</p></article>
+      <div class="overview-grid reveal">
+        <article>
+          <small>&Aacute;REA 01</small>
+          <h3>Vis&atilde;o Geral</h3>
+          <p>Resumo inicial da comunidade e direcionamento para as pr&oacute;ximas telas.</p>
+        </article>
+        <article>
+          <small>&Aacute;REA 02</small>
+          <h3>Membros</h3>
+          <p>Grade com fotos circulares e nomes dos integrantes cadastrados.</p>
+        </article>
       </div>
-    </section>
-
-    <section class="strategy" id="estrategia">
-      <div class="strategy-inner reveal">
-        <div class="section-number">02 <span></span></div>
-        <p class="kicker">NENHUMA PARTIDA É IGUAL</p>
-        <h2>PENSE COMO UM<br><em>ESTRATEGISTA.</em></h2>
-        <p>Rotas, itens, visão e trabalho em equipe. Cada segundo importa quando dois Ancestrais estão em jogo.</p>
-        <div class="stats">
-          <div><strong>120+</strong><span>HERÓIS ÚNICOS</span></div>
-          <div><strong>∞</strong><span>ESTRATÉGIAS</span></div>
-          <div><strong>1</strong><span>OBJETIVO</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="competitivo">
-      <div class="cta-copy reveal"><p class="kicker">SUA LENDA COMEÇA AGORA</p><h2>A ARENA ESTÁ<br><em>CHAMANDO.</em></h2></div>
-      <a class="btn-primary large" id="jogar" href="https://store.steampowered.com/app/570/Dota_2/" target="_blank" rel="noreferrer">Jogar Dota 2 grátis <span>↗</span></a>
     </section>
   </main>
 
-  <footer><a class="brand" href="#inicio"><span class="brand-mark"><i></i><i></i></span><span>DOTA <b>2</b></span></a><p>Projeto conceitual de fã. Dota 2 é uma marca da Valve Corporation.</p><p>© 2026</p></footer>
+  <footer>
+    <a class="brand" href="index.html">
+      <img class="brand-icon" src="assets/dota-icon.svg" alt="" />
+      <span>The <b>National</b></span>
+    </a>
+    <p>Projeto conceitual de f&atilde;. Dota 2 &eacute; uma marca da Valve Corporation.</p>
+    <p>&copy; 2026</p>
+  </footer>
 
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Trailer" hidden><button class="modal-close" aria-label="Fechar">×</button><div class="modal-card"><span class="play giant">▶</span><h2>A BATALHA COMEÇA AQUI</h2><p>Trailer em breve.</p></div></div>
   <script src="script.js"></script>
 </body>
 </html>
