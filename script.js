@@ -24,6 +24,63 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+const countdownElements = {
+  months: document.querySelector('[data-countdown="months"]'),
+  days: document.querySelector('[data-countdown="days"]'),
+  hours: document.querySelector('[data-countdown="hours"]'),
+  minutes: document.querySelector('[data-countdown="minutes"]'),
+  seconds: document.querySelector('[data-countdown="seconds"]')
+};
+
+const eventDate = new Date('2027-05-27T00:00:00-03:00');
+const gmtMinusThree = 3 * 60 * 60 * 1000;
+
+function getCountdown(now) {
+  if (now >= eventDate) {
+    return { months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
+
+  const zonedNow = new Date(now.getTime() - gmtMinusThree);
+  const zonedTarget = new Date(eventDate.getTime() - gmtMinusThree);
+  let months = (zonedTarget.getUTCFullYear() - zonedNow.getUTCFullYear()) * 12
+    + zonedTarget.getUTCMonth() - zonedNow.getUTCMonth();
+  let monthCursor = new Date(zonedNow);
+  monthCursor.setUTCMonth(monthCursor.getUTCMonth() + months);
+
+  if (monthCursor > zonedTarget) {
+    months -= 1;
+    monthCursor = new Date(zonedNow);
+    monthCursor.setUTCMonth(monthCursor.getUTCMonth() + months);
+  }
+
+  let remaining = zonedTarget - monthCursor;
+  const days = Math.floor(remaining / 86400000);
+  remaining %= 86400000;
+  const hours = Math.floor(remaining / 3600000);
+  remaining %= 3600000;
+  const minutes = Math.floor(remaining / 60000);
+  const seconds = Math.floor((remaining % 60000) / 1000);
+
+  return { months, days, hours, minutes, seconds };
+}
+
+function updateCountdown() {
+  const countdown = getCountdown(new Date());
+
+  Object.entries(countdown).forEach(([unit, value]) => {
+    countdownElements[unit].textContent = String(value).padStart(2, '0');
+  });
+
+  return Object.values(countdown).some(Boolean);
+}
+
+if (countdownElements.months) {
+  updateCountdown();
+  const countdownInterval = setInterval(() => {
+    if (!updateCountdown()) clearInterval(countdownInterval);
+  }, 1000);
+}
+
 const membersGrid = document.querySelector('[data-members-grid]');
 const accountIds = [
   194586868,
